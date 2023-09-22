@@ -1,0 +1,140 @@
+:root {
+    --dark: #0d0d0d;
+    --light: whitesmoke;
+    --colorscheme: #d55fe0;
+
+} 
+
+
+body {
+    background-color: var(--dark);
+}
+
+main{
+    padding-top: 40px;
+}
+
+.grid-container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: max-content;
+    grid-gap: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+h1 {
+    color: var(--colorscheme);
+    font-size: 200%;
+    text-align: center;
+    margin-top:35px;
+}
+
+h2 {
+    color: var(--colorscheme);
+    font-size: 150%;
+    text-align: left;
+} 
+
+h3 {
+    color: var(--colorscheme);
+    font-size: 125%;
+    text-align: center;
+    margin-top:35px;
+} 
+
+header p {
+    color: var(--light);
+    text-align: center;
+    margin-top:25px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+
+.card-header {
+    position: relative;
+    margin-top: -20px;
+    top: 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    border-color: var(--light);
+    background-color: var(--dark);
+    padding: 5px;
+    width: 90%;
+    margin: auto;
+    z-index: 1;
+}
+
+.card-header p {
+    color: var(--colorscheme);
+    text-align: center;
+    margin-top: 25px;
+}
+
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-style: dashed;
+    border-color: var(--light);
+    padding: 10px;
+    height: 90%;
+}
+
+.code-card {
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(
+        rgba(232, 102, 236, 0.3) 0%,
+        var(--colorscheme) 100%
+    );
+    border-radius: 5px;
+    text-align: left;
+    padding-left: 10px;
+    height: 100%;
+}
+
+.code-card .card-header {
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+  }
+  
+.code-card:hover,
+.code-card:hover .card-header {
+    box-shadow: inset 0px 0px 8px
+  rgba(232, 102, 236, 1), 0 0 15px
+  rgba(232, 102, 236, 1);
+}
+
+.card-content p {
+    color: var(--colorscheme);
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+code {
+    color: var(--light);
+    text-align: left;
+    font-family:monospace;
+}
+
+@media screen and (max-width: 992px) {
+    .grid-container {
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+  }
+
+  /* Large smartphones - navbar changes color - up to 768px */
+  @media screen and (max-width: 768px) {
+    .grid-container {
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+  }
