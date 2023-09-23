@@ -120,6 +120,17 @@ code {
     font-family:monospace;
 }
 
+/* code gets highlighted when user clicks */
+code:active {
+    user-select:all;
+}
+
+/* user's selection gets highlighted and format of highlighted block is changed */
+code::selection {
+    background-color: turquoise;
+    color:black;
+}
+
 @media screen and (max-width: 992px) {
     .grid-container {
         display: grid;
